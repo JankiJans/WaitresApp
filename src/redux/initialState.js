@@ -1,6 +1,10 @@
 const initialState = {
 
     tables: [
+    ],
+
+    tableStatus: [
+
     ]
   };
   

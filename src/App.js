@@ -7,20 +7,20 @@ import { fetchTables } from './redux/tablesRedux';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import Table from './components/pages/Table/Table';
+import { fetchStatus } from './redux/tableStatusRedux';
 
 const App = () => {
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchTables());
-  }, [dispatch]);
+  useEffect(() => dispatch(fetchTables()), [dispatch]);
+  useEffect(() => dispatch(fetchStatus()), [dispatch]);
 
   return (
     <Container>
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/table/:tableId" element={<Table />} />
+        <Route path="/table/:id" element={<Table />} />
       </Routes>
       <Footer />
     </Container>

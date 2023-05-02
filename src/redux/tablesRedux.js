@@ -1,6 +1,6 @@
 //selectors
-export const getTables = ({tables}) => tables
-export const getTablesById = ({ tables }, tableId ) => tables.find(( table ) => table.id === tableId);
+export const getTables = state => state.tables;
+export const getTablesById = ({ tables }, id) => tables.find(table => table.id === id);
 
 // action names
 const createActionName = actionName => `app/tables/${actionName}`;

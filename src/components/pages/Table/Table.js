@@ -1,8 +1,8 @@
-import EditTableForm from "../../features/EditTableForm"
+import TableForm from "../../features/TableForm"
 
 const Table = () => {
     return (
-        <div><EditTableForm/></div>
+        <div><TableForm/></div>
         
     )
 }
